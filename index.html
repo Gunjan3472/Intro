@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gunjan Singh | IGDTUW ECE Student</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        :root {
+            --primary: #7e57c2;
+            --secondary: #26a69a;
+            --accent: #ffb74d;
+            --light: #f5f5f5;
+            --dark: #263238;
+        }
+
+        body {
+            background: linear-gradient(135deg, #e0f7fa, #bbdefb);
+            color: var(--dark);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            padding: 30px 0;
+            animation: fadeIn 1.5s ease;
+        }
+
+        h1 {
+            color: var(--primary);
+            font-size: 3rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: var(--secondary);
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+        }
+
+        .intro-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            margin-bottom: 50px;
+            animation: slideUp 1.5s ease;
+        }
+
+        .profile-card {
+            background: linear-gradient(145deg, #ffffff, #e6f0ff);
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            width: 100%;
+            max-width: 500px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .profile-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .profile-img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto 20px;
+            border: 5px solid var(--primary);
+            padding: 5px;
+            background: var(--light);
+        }
+
+        .emoji-container {
+            font-size: 4rem;
+            margin: 20px 0;
+            animation: bounce 2s infinite;
+        }
+
+        .content {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        .highlight {
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        .interactive-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+            margin-bottom: 50px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            width: 100%;
+            max-width: 350px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .card i {
+            font-size: 2.5rem;
+            color: var(--secondary);
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+
+        .btn {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 50px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin: 10px 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn:hover {
+            background: var(--secondary);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+            color: var(--primary);
+            font-weight: 500;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideUp {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5rem; }
+            h2 { font-size: 1.5rem; }
+            
+            .intro-section {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            .profile-card {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Gunjan Singh</h1>
+            <h2>First Year ECE Student at IGDTUW</h2>
+        </header>
+
+        <section class="intro-section">
+            <div class="profile-card">
+                <div class="emoji-container">
+                    <!-- Study emojis -->
+                    <span>👩‍🎓📚💻</span>
+                </div>
+                <h3>Hello There!</h3>
+                <p class="content">
+                    I'm <span class="highlight">Gunjan Singh</span>, a passionate and dedicated first-year Electronics and Communication Engineering student at <span class="highlight">Indira Gandhi Delhi Technical University for Women (IGDTUW)</span>. 
+                </p>
+                <p class="content">
+                    As a <span class="highlight">studious individual</span>, I believe in the power of knowledge and continuous learning. I'm fascinated by the world of electronics and communication technology and how it's shaping our future.
+                </p>
+                <p class="content">
+                    When I'm not studying or working on projects, you can find me exploring new technologies, reading books, or participating in technical events to expand my horizons.
+                </p>
+            </div>
+
+            <div class="profile-card">
+                <img src="https://i.imgur.com/xyPJn4b.png" alt="Studying Illustration" class="profile-img">
+                <h3>My Academic Journey</h3>
+                <p class="content">
+                    My journey in Electronics and Communication Engineering has just begun, and I'm excited to delve deeper into subjects like digital electronics, signal processing, and communication systems.
+                </p>
+                <p class="content">
+                    I approach my studies with <span class="highlight">curiosity and dedication</span>, always striving to understand the fundamental concepts that drive technological innovation.
+                </p>
+                <div class="emoji-container">
+                    <span>📊🔬📐</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="interactive-section">
+            <div class="card">
+                <i class="fas fa-book-open"></i>
+                <h3>Study Interests</h3>
+                <p>I'm particularly interested in circuit design, embedded systems, and wireless communication technologies.</p>
+                <button class="btn" onclick="showInterest()">My Focus Areas</button>
+            </div>
+
+            <div class="card">
+                <i class="fas fa-graduation-cap"></i>
+                <h3>Academic Goals</h3>
+                <p>I aim to excel in my coursework while actively participating in research projects and technical clubs.</p>
+                <button class="btn" onclick="showGoals()">My Goals</button>
+            </div>
+
+            <div class="card">
+                <i class="fas fa-lightbulb"></i>
+                <h3>Beyond Academics</h3>
+                <p>I believe in maintaining a balance between studies and extracurricular activities for holistic development.</p>
+                <button class="btn" onclick="showHobbies()">My Interests</button>
+            </div>
+        </section>
+
+        <footer>
+            <p>Made with ❤️ by Gunjan Singh | First Year ECE Student at IGDTUW</p>
+        </footer>
+    </div>
+
+    <script>
+        // Interactive functions
+        function showInterest() {
+            alert("My focus areas in ECE:\n\n• Circuit Design & Analysis\n• Digital Electronics\n• Communication Systems\n• Embedded Systems\n• Signal Processing");
+        }
+
+        function showGoals() {
+            alert("My academic goals:\n\n• Maintain an excellent academic record\n• Participate in research projects\n• Develop practical technical skills\n• Contribute to innovative projects\n• Prepare for higher studies in ECE");
+        }
+
+        function showHobbies() {
+            alert("My interests beyond academics:\n\n• Reading technology blogs and books\n• Participating in technical workshops\n• Solving puzzles and brain teasers\n• Attending tech talks and seminars\n• Exploring new programming languages");
+        }
+
+        // Add some dynamic color changes to make it more interactive
+        document.addEventListener('DOMContentLoaded', function() {
+            const colors = ['#7e57c2', '#26a69a', '#ffb74d', '#42a5f5'];
+            let i = 0;
+            
+            document.querySelectorAll('.btn').forEach(btn => {
+                btn.addEventListener('mouseover', () => {
+                    btn.style.backgroundColor = colors[i];
+                    i = (i + 1) % colors.length;
+                });
+                
+                btn.addEventListener('mouseout', () => {
+                    setTimeout(() => {
+                        btn.style.backgroundColor = '';
+                    }, 500);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
